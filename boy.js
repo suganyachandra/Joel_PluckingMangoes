@@ -1,0 +1,21 @@
+class Boy{
+    constructor(x,y,width,height){
+        this.y=y;
+        this.x=x;
+        this.width=width;
+        this.height=height;
+        this.image=loadImage("boy.png")
+        this.body=Bodies.rectangle(this.x,this.y,this,width,this,height)
+        World.add(world,this.body)
+    }
+    display(){
+        push()
+        strokeWeight(4);
+        stroke("yellow");
+        fill(255);
+        rectMode(CENTER);
+        image(this.image,this.x,this.y,this.width,this.height);
+        //rect(this.x,this.y,this.width,this.height);
+        pop()
+    }
+}
